@@ -32,3 +32,4 @@ Route::post('/addValue',[MainController::class,'addValue']);
 Route::get('/edit/{id}',[MainController::class,'edit']);
 Route::post('/update',[MainController::class,'update']);
 Route::post('/delete',[MainController::class,'delete']);
+Route::get('/logout',[MainController::class,'logout']);

@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 // use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\crypt;
+use Illuminate\Support\Facades\Auth;
+
 use  App\Models\Restaurant;
 use  App\Models\User;
 use Session;
@@ -94,6 +96,13 @@ class MainController extends Controller
         }
         
     }
+     function logout(Request $request){
+         
+            $request->session()->flush();
+            Auth::logout();
+            return redirect('/login'); 
+
+     }
   
 
 }
